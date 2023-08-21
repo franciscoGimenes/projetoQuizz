@@ -1,0 +1,13 @@
+.hide{
+    display: none;
+}
+.correct{
+    background-color: green;
+}
+.wrong{
+    background-color: red;
+}
+img {
+    width: 700px;
+    height: auto;
+}

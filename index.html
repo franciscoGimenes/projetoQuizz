@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Quizz</title>
+</head>
+<body>
+    <header class="header" id="header"></header>
+
+    <div id="main" class="main">
+        <div class="container" id="um">
+            <h1>Bem vindo a casa do caralho</h1>
+            <input placeholder="quantidade de vidas (max:10)" type="number" id="vidas">
+            <button class="button" id="iniciar">Iniciar essa porra</button>
+        </div>
+    </div>
+    <div class="questoes hide" id="questoes">
+        <h3 id="atualQuestao">0</h3>
+        <img src="" alt="Imagem pra te ajudar" class="img" id="img">
+        <h2 id="tituloDaQuestao"></h2>
+        <button id="btn-0" class="option"></button>
+        <button id="btn-1" class="option"></button>
+        <button id="btn-2" class="option"></button>
+        <button id="btn-3" class="option"></button>
+    </div>
+
+    <div class="fim hide" id="fim">
+        <h2 id="terminoTitulo">parabens se terminou essa porara</h2>
+        <p id="score" >vc marcou um total de 0 pontos</p>
+        <p id="feedback">Você fez o seu melhor</p>
+        <button id="voltar">reiniciar</button>
+    </div>
+
+    <footer id="footer" class="footer"></footer>
+    <script src="script.js"></script>
+</body>
+</html>
