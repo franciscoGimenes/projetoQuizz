@@ -121,6 +121,7 @@ const btn0 = document.querySelector("#btn-0"),
     pontosFinais = document.querySelector('#score'),
     feedback = document.querySelector("#feedback")
     
+botoes = [btn0, btn1, btn2, btn3]
 
 reiniciar.addEventListener('click', () => {
     comecoDiv.classList.remove('hide')
@@ -183,140 +184,55 @@ function carregarTermino(){
     }
 }
 
+function conferirResposta(resposta){
+    respostaCerta = questoes[questaoAtual].respostaCorreta
+    diff = questoes[questaoAtual].dificuldade
+    console.log(respostaCerta)
+    if (resposta == respostaCerta){
+        if (diff == "hard"){
+            score += 30
+            ++questaoAtual
+            carregar()
+        }else if(diff == "medium"){
+            score += 20
+            ++questaoAtual
+            carregar()
+        }else{
+            score += 10
+            ++questaoAtual
+            carregar()
+        }
+    }
+    else{
+        botoes[resposta].classList.add("wrong")
+        --vidas
+        if(vidas > 0){
+              alert(`Resposta errada :(, mas voce ainda tem ${vidas} vida(s)!`)
+        }
+        else{
+            alert(`Suas vidas acabaram`)
+            carregarTermino()
+        }
 
+    }
+}
 
 
 
 btn0.addEventListener('click', () => {
     resposta = 0
-    respostaCerta = questoes[questaoAtual].respostaCorreta
-    diff = questoes[questaoAtual].dificuldade
-    console.log(respostaCerta)
-    if (resposta == respostaCerta){
-        if (diff == "hard"){
-            score += 30
-            ++questaoAtual
-            carregar()
-        }else if(diff == "medium"){
-            score += 20
-            ++questaoAtual
-            carregar()
-        }else{
-            score += 10
-            ++questaoAtual
-            carregar()
-        }
-    }
-    else{
-        btn0.classList.add("wrong")
-        --vidas
-        if(vidas > 0){
-              alert(`Resposta errada :(, mas voce ainda tem ${vidas} vida(s)!`)
-        }
-        else{
-            alert(`Suas vidas acabaram`)
-            carregarTermino()
-        }
-
-    }
+    conferirResposta(resposta)
 })
 btn1.addEventListener('click', () => {
     resposta = 1
-    respostaCerta = questoes[questaoAtual].respostaCorreta
-    console.log(respostaCerta)
-    diff = questoes[questaoAtual].dificuldade
-    if (resposta == respostaCerta){
-        if (diff == "hard"){
-            score += 30
-            ++questaoAtual
-            carregar()
-        }else if(diff == "medium"){
-            score += 20
-            ++questaoAtual
-            carregar()
-        }else{
-            score += 10
-            ++questaoAtual
-            carregar()
-        }
-    }
-    else{
-        btn1.classList.add("wrong")
-        --vidas
-        if(vidas > 0){
-              alert(`Resposta errada :(, mas voce ainda tem ${vidas} vida(s)!`)
-        }
-        else{
-            alert(`Suas vidas acabaram`)
-            carregarTermino()
-        }
-
-    }
+    conferirResposta(resposta)
 })
 btn2.addEventListener('click', () => {
     resposta = 2
-    respostaCerta = questoes[questaoAtual].respostaCorreta
-    console.log(respostaCerta)
-    diff = questoes[questaoAtual].dificuldade
-    if (resposta == respostaCerta){
-        if (diff == "hard"){
-            score += 30
-            ++questaoAtual
-            carregar()
-        }else if(diff == "medium"){
-            score += 20
-            ++questaoAtual
-            carregar()
-        }else{
-            score += 10
-            ++questaoAtual
-            carregar()
-        }
-    }
-    else{
-        btn2.classList.add("wrong")
-        --vidas
-        if(vidas > 0){
-              alert(`Resposta errada :(, mas voce ainda tem ${vidas} vida(s)!`)
-        }
-        else{
-            alert(`Suas vidas acabaram`)
-            carregarTermino()
-        }
-
-    }
+    conferirResposta(resposta)
 })
 btn3.addEventListener('click', () => {
     resposta = 3
-    respostaCerta = questoes[questaoAtual].respostaCorreta
-    console.log(respostaCerta)
-    diff = questoes[questaoAtual].dificuldade
-    if (resposta == respostaCerta){
-        if (diff == "hard"){
-            score += 30
-            ++questaoAtual
-            carregar()
-        }else if(diff == "medium"){
-            score += 20
-            ++questaoAtual
-            carregar()
-        }else{
-            score += 10
-            ++questaoAtual
-            carregar()
-        }
-    }
-    else{
-        btn3.classList.add("wrong")
-        --vidas
-        if(vidas > 0){
-              alert(`Resposta errada :(, mas voce ainda tem ${vidas} vida(s)!`)
-        }
-        else{
-            alert(`Suas vidas acabaram`)
-            carregarTermino()
-        }
-
-    }
+    conferirResposta(resposta)
 })
 
