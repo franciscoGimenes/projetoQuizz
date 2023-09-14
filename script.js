@@ -176,11 +176,11 @@ function carregarTermino(){
     fimDiv.classList.remove('hide')
     if (vidas > 0){
         terminoTitulo.textContent = "parabéns, você completou o quizz!"
-        pontosFinais.textContent = `Você marcou ${score} pontos`
+        pontosFinais.textContent = `Marcou ${score} pontos`
     }
     else {
-        terminoTitulo.textContent = "Você perdeu"
-        pontosFinais.textContent = `Você marcou ${score} pontos`
+        terminoTitulo.textContent = "perdeu"
+        pontosFinais.textContent = `Marcou ${score} pontos`
     }
 }
 

@@ -2,6 +2,9 @@
 /* font-family: 'Bebas Neue', sans-serif;
 font-family: 'Phudu', cursive;
 font-family: 'Roboto', sans-serif; */
+body{
+    background-color: #42113C;
+}
 .hide{
     display: none;
 }
@@ -11,9 +14,9 @@ font-family: 'Roboto', sans-serif; */
 .wrong{
     background-color: red;
 }
-img {
-    width: 700px;
-    height: auto;
+.questoes img {
+    height: 350px;
+    width: auto;
 }
 .header .titulo{
    font: 400 48px 'Bebas Neue', sans-serif; 
@@ -25,14 +28,76 @@ img {
     display: flex;
     justify-content: flex-start;
 }
-.main{
-    height: auto;
+.main .container{
     margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px 
+    justify-content: center;
+    gap: 20px 
 }
 .main .titulo{
-    font: 700 28px 'Roboto', sans-serif;
+    text-align: center;
+    font: 400 28px 'Bebas Neue', sans-serif;
+    color: #6BD425;
+}
+.input {
+    font-family: 'Roboto', sans-serif; 
+    max-width: 190px;
+    outline: none;
+    border: 1px solid #6BD425;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #6BD425;
+    transition: .3s;
+    color: #42113C;
+  }
+  
+  .input:focus {
+    border: 1px solid #6BD425;
+    box-shadow: 0 0 0 4px #618B25
+  }
+  button {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f7fe;
+    color: #42113C;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+  }
+  
+  button:hover {
+    background-color: #6BD425;
+    box-shadow: 0 0 0 5px #618B25;
+    color: #fff;
+  }
+.texto-home{
+    text-align: center;
+    color: #6BD425;
+    font: 400 20px 'Roboto', sans-serif;;
+}
+.questoes .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+#tituloDaQuestao, #terminoTitulo, #score, #feedback{
+    color: #6BD425;
+    font: 400 30px 'Bebas Neue', sans-serif;;
+}
+.fim .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 100px;
 }
