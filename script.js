@@ -1,4 +1,4 @@
-let questoes = [
+let questoesBase = [
     questao = {
         tituloQuestao: "Qual é a capital do Brasil?",
         opcoes: ["Belo Horizonte"," Brasília"," Rio de Janeiro","São Paulo"],
@@ -105,6 +105,9 @@ let questoes = [
         dificuldade: "hard"
     },
 ]
+
+let questoes = questoesBase.sort(() => Math.random() - 0.5)
+
 const btn0 = document.querySelector("#btn-0"),
     btn1 = document.querySelector("#btn-1"),
     btn2 = document.querySelector("#btn-2"),
